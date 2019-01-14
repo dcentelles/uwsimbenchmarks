@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 {
 	//osg::notify(osg::ALWAYS) << "UWSim; using osgOcean " << osgOceanGetVersion() << std::endl;
 
-	boost::shared_ptr<osg::ArgumentParser> arguments(new osg::ArgumentParser(&argc,argv));
+	std::shared_ptr<osg::ArgumentParser> arguments(new osg::ArgumentParser(&argc,argv));
 	arguments->getApplicationUsage()->setApplicationName(arguments->getApplicationName());
 	arguments->getApplicationUsage()->setDescription(arguments->getApplicationName()+" is using osgOcean.");
 	arguments->getApplicationUsage()->setCommandLineUsage(arguments->getApplicationName()+" [options] ...");
@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
         int drawPhysics = 0;
         if (!arguments->read("--debugPhysics", osg::ArgumentParser::Parameter(drawPhysics)) && arguments->read("--debugPhysics"))
           drawPhysics = 2;
-        boost::shared_ptr<osgbCollision::GLDebugDrawer> debugDrawer;
+        std::shared_ptr<osgbCollision::GLDebugDrawer> debugDrawer;
         if (config.enablePhysics && drawPhysics > 0){
           debugDrawer.reset(new osgbCollision::GLDebugDrawer());
           debugDrawer->setDebugMode(drawPhysics);

@@ -110,10 +110,10 @@ public:
 
 class CurrentToROSWrenchStamped : public ROSPublisherInterface
 {
-  boost::shared_ptr<Current> current;
+  std::shared_ptr<Current> current;
   SimulatedIAUV *  vehicle;
 public:
-  CurrentToROSWrenchStamped(std::string topic, int rate,   boost::shared_ptr<Current> current, SimulatedIAUV *  vehicle);
+  CurrentToROSWrenchStamped(std::string topic, int rate,   std::shared_ptr<Current> current, SimulatedIAUV *  vehicle);
 
   void createPublisher(ros::NodeHandle &nh);
 

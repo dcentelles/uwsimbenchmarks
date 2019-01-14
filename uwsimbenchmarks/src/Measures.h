@@ -207,7 +207,7 @@ private:
   int gridPoints, gridOccupiedPoints;
   osg::Node * target;
   osg::ref_ptr<osg::Group> drawPoints;
-  boost::shared_ptr<osg::Matrixd> WcT;
+  std::shared_ptr<osg::Matrixd> WcT;
 public:
   void start(void);
   void stop(void);

@@ -72,7 +72,7 @@ private:
   double initialCurrent,finalCurrent,step,myCurrent;
   SimulatedIAUV *  vehicle;
   osg::Matrixd m;
-  boost::shared_ptr<Current> current;
+  std::shared_ptr<Current> current;
   CurrentToROSWrenchStamped * pub;
 public:
   int updateScene();

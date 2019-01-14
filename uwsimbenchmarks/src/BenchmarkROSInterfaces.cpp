@@ -210,7 +210,7 @@ BenchmarkInfoToROSString::~BenchmarkInfoToROSString(){
 }
 
 
-CurrentToROSWrenchStamped::CurrentToROSWrenchStamped(std::string topic, int rate,   boost::shared_ptr<Current> current, SimulatedIAUV *  vehicle):
+CurrentToROSWrenchStamped::CurrentToROSWrenchStamped(std::string topic, int rate,   std::shared_ptr<Current> current, SimulatedIAUV *  vehicle):
     ROSPublisherInterface(topic, rate){
   this->current=current;
   this->vehicle=vehicle;

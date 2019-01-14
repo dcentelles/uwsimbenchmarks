@@ -160,7 +160,7 @@ CurrentForceUpdater::CurrentForceUpdater(double initialCurrent, double finalCurr
   this->finalCurrent=finalCurrent;
   this->step=step;
   this->vehicle=vehicle;
-  this->current=(boost::shared_ptr<Current>) new Current(initialCurrent, currentInfo.dir,currentInfo.forceVar,currentInfo.forcePer,currentInfo.dirVar,currentInfo.dirPer,currentInfo.random);
+  this->current=(std::shared_ptr<Current>) new Current(initialCurrent, currentInfo.dir,currentInfo.forceVar,currentInfo.forcePer,currentInfo.dirVar,currentInfo.dirPer,currentInfo.random);
   m=vehicle->baseTransform->getMatrix();
   pub=NULL;
   if(publishAs)
