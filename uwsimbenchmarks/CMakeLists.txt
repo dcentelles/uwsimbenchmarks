@@ -90,6 +90,7 @@ src/Current.cpp
 src/BagPlayer.cpp
 src/FogAdderBagPlayer.cpp)
 
+add_dependencies(uwsimbenchmarks uwsimbenchmarks_generate_messages_cpp)
 
 TARGET_LINK_LIBRARIES(uwsimbenchmarks   ${OSGOCEAN_LIBRARIES} ${PCL_LIBRARIES} ${catkin_LIBRARIES} ${OPENSCENEGRAPH_LIBRARIES} ${LIBXML++_LIBRARIES}  ${BULLET_LIBRARIES} ${OSGBULLET_LIBRARIES} ${OSGWORKS_LIBRARIES} ${OSGUTILS_LIBRARIES} ${OSGINTERACTIVEMARKERS_LIBRARIES} ${OSGMARKERS_LIBRARIES}  -lmuparser GLU)
 
